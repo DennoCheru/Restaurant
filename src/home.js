@@ -1,3 +1,5 @@
+import createMenuPage from "./menu";
+
 function createHomePage() {
     const content = document.getElementById('content');
 
@@ -24,6 +26,17 @@ function createHomePage() {
     const ctaButton = document.createElement('button');
     ctaButton.textContent = 'Explore Our Menu';
     ctaButton.classList.add('cta-button');
+
+    ctaButton.addEventListener('click', () => {
+        const buttons = document.querySelectorAll('nav button');
+        buttons.forEach(button => {
+            button.classList.remove('active');
+        });
+        document.getElementById('menuBtn').classList.add('active');
+        const content = document.getElementById('content');
+        content.textContent = '';
+        createMenuPage();
+    })
 
     homeContainer.appendChild(headline);
     homeContainer.appendChild(subheading);
