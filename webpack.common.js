@@ -9,10 +9,6 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         clean: true,
     },
-    devtool: 'inline-source-map',
-    devServer: {
-        watchFiles: ['./src/template.html'],
-    },
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Development',
