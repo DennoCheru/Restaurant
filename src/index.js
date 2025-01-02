@@ -1,6 +1,7 @@
 import './style.css';
 import createHomePage from "./home.js";
 import createContactPage from './contact.js';
+import createMenuPage from './menu.js';
 
 function clearContent() {
     const content = document.getElementById('content');
