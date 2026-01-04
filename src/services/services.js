@@ -99,6 +99,7 @@ const container = document.querySelector('#content');
 const restaurantContainer = document.createElement('div');
 restaurantContainer.classList.add('container', 'restaurantContainer');
 const mealsTitle = document.createElement('h1');
+mealsTitle.classList.add('sticky');
 mealsTitle.textContent = "Our Meals";
 restaurantContainer.appendChild(mealsTitle);
 
@@ -126,6 +127,7 @@ restaurantContainer.appendChild(mealsContainer);
 const accomodationContainer = document.createElement('div');
 accomodationContainer.classList.add('container', 'accomodationContainer');
 const accomodationTitle = document.createElement('h1');
+accomodationTitle.classList.add('sticky');
 accomodationTitle.textContent = "Our Rooms";
 accomodationContainer.appendChild(accomodationTitle);
 
@@ -153,6 +155,7 @@ accomodationContainer.appendChild(roomsContainer);
 const healthFitnessContainer = document.createElement('div');
 healthFitnessContainer.classList.add('container', 'healthFitnessContainer');
 const healthFitnessTitle = document.createElement('h1');
+healthFitnessTitle.classList.add('sticky');
 healthFitnessTitle.textContent = "Health & Fitness";
 healthFitnessContainer.appendChild(healthFitnessTitle);
 

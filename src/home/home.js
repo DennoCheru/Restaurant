@@ -36,6 +36,7 @@ function Home() {
     servicesContainer.classList.add('container', 'servicesContainer')
     
     const servicesTitle = document.createElement('h1');
+    servicesTitle.classList.add('sticky');
     servicesTitle.textContent = "Our Services";
 
     const services = document.createElement('div');
@@ -82,6 +83,7 @@ function Home() {
     const reviewsContainer = document.createElement('div');
     reviewsContainer.classList.add('container', 'reviewsContainer')
     const reviewTitle = document.createElement('h1');
+    reviewTitle.classList.add('sticky');
     reviewTitle.textContent = "What Our Customers Say";
     reviewsContainer.appendChild(reviewTitle);
     const reviews = document.createElement('div');
