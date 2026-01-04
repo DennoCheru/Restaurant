@@ -98,10 +98,32 @@ footer {
     margin-right: auto;
 }
 
-.contactForm > button {
+.contactForm > .submitBtn {
+    background:transparent;
+    color: var(--text-color);
+    border: none;
+    cursor: pointer;
+    margin: 0 auto;
+    opacity: 1;
+}
+
+.contactForm> button:hover {
     background-color: var(--text-color);
     color: var(--bg-color);
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
+}
+
+.contactForm> button,
+input,
+textarea {
+    appearance: none;
+    font-family: inherit;
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin: 0;
+    box-sizing: border-box;
+    border-radius: 8px;
+     background-color: var(--text-color);
+    color: var(--bg-color);
+    opacity: 1;
 }

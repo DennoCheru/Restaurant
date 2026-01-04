@@ -63,6 +63,7 @@ fields.forEach(field => {
     contactForm.appendChild(fieldWrapper);
 });
 const submitBtn = document.createElement('button');
+submitBtn.classList.add("submitBtn")
 submitBtn.type = "submit";
 submitBtn.textContent = "Send Message";
 contactForm.appendChild(submitBtn);
