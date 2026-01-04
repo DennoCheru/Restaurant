@@ -9,6 +9,10 @@ import doubleBed from "./images/doublebed.jpg";
 import hotelRoom1 from "./images/hotel room.jpg";
 import hotelRoom2 from "./images/hotel room 2.jpg";
 import hotelRoom3 from "./images/hotel room 3.jpg";
+import swimming from "./images/hotel swimming.jpg";
+import massage from "./images/massage.jpg";
+import gym from "./images/gym.jpg";
+
 
 const meals = [
     {
@@ -71,6 +75,24 @@ const rooms = [
     },
 ];
 
+const healthFitness = [
+    {
+        name: "Swimming Pool",
+        price: 500,
+        image: swimming, 
+    },
+    {
+        name: "Massage Parlour",
+        price: 1500,
+        image: massage,
+    },
+    {
+        name: "Indoor Gym",
+        price: 1000,
+        image: gym,
+    },
+];
+
 function services() {
 const container = document.querySelector('#content');
 
@@ -128,8 +150,37 @@ rooms.forEach(room => {
 });
 accomodationContainer.appendChild(roomsContainer);
 
+const healthFitnessContainer = document.createElement('div');
+healthFitnessContainer.classList.add('container', 'healthFitnessContainer');
+const healthFitnessTitle = document.createElement('h1');
+healthFitnessTitle.textContent = "Health & Fitness";
+healthFitnessContainer.appendChild(healthFitnessTitle);
+
+const utilities = document.createElement('div');
+utilities.classList.add('utilities');
+
+healthFitness.forEach(utility => {
+    const utilityCard = document.createElement('div');
+    utilityCard.classList.add('card', 'utilityCard');
+
+    const img = document.createElement('img');
+    img.src = utility.image;
+    img.alt = utility.name;
+
+    const utilityName = document.createElement('h3');
+    utilityName.textContent = utility.name;
+
+    const utilityPrice = document.createElement('p');
+    utilityPrice.textContent = `Ksh ${utility.price}`;
+
+    utilityCard.append(img, utilityName,utilityPrice);
+    utilities.appendChild(utilityCard);
+});
+healthFitnessContainer.appendChild(utilities);
+
 container.appendChild(restaurantContainer);
 container.appendChild(accomodationContainer);
+container.appendChild(healthFitnessContainer);
 }
 
 export default services;
