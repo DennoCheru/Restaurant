@@ -1,5 +1,3 @@
-import "./styles.css"
-
 import logo from "./images/logo.png"
 import restaurantPic from "./images/restaurant.jpg";
 import accomodationPic from "./images/hotel room.jpg";
