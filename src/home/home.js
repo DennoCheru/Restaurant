@@ -1,34 +1,87 @@
 import "./styles.css"
+
 import logo from "./images/logo.png"
+import restaurantPic from "./images/restaurant.jpg";
+import accomodationPic from "./images/hotel room.jpg";
+import swimmingPic from "./images/hotel swimming.jpg";
 
 function home() {
     let container = document.querySelector("#content");
+    container.classList.add('container');
     container.textContent = "";
-
-    let header = document.createElement('h1');
-    header.textContent = "Home";
 
     let hero = document.createElement('div');
     hero.classList.add("hero");
 
     let text = document.createElement('div');
+
     let textTitle = document.createElement('h2');
     textTitle.textContent = "Your Home of Comfort, Flavor & Relaxation.";
+
     let textParagraph = document.createElement('p');
     textParagraph.textContent = "From delicious meals and cozy rooms to refreshing swims and energizing gym sessions, we make every stay unforgettable."
+    
     text.appendChild(textTitle);
     text.appendChild(textParagraph)
 
     let media = document.createElement('div');
     let heroImg = document.createElement('img');
     heroImg.src = logo;
+    heroImg.alt = "Logo"
     media.appendChild(heroImg);
 
     hero.appendChild(text)
     hero.append(media);
 
-    container.appendChild(header);
+    let servicesContainer = document.createElement('div');
+    servicesContainer.classList.add('container', 'servicesContainer')
+    
+    let servicesTitle = document.createElement('h1');
+    servicesTitle.textContent = "Our Services";
+
+    let services = document.createElement('div');
+    services.classList.add('services');
+
+    let restaurant = document.createElement('div');
+    restaurant.classList.add('card');
+    let restaurantText = document.createElement('h2');
+    restaurantText.textContent = "Restaurant";
+    let restaurantImg = document.createElement('img');
+    restaurantImg.src = restaurantPic;
+    restaurantImg.alt = "Restaurant";
+    restaurant.appendChild(restaurantText);
+    restaurant.appendChild(restaurantImg)
+
+    let accomodation = document.createElement('div');
+    accomodation.classList.add('card');
+    let accomodationText = document.createElement('h2');
+    accomodationText.textContent = "Accomodation";
+    let accomodationImg = document.createElement('img');
+    accomodationImg.src = accomodationPic;
+    accomodationImg.alt = "Accomodation";
+    accomodation.appendChild(accomodationText);
+    accomodation.appendChild(accomodationImg);
+
+    let healthFitness = document.createElement('div');
+    healthFitness.classList.add('card');
+    let healthFitnessText = document.createElement('h2');
+    healthFitnessText.textContent = "Health & Fitness";
+    let healthFitnessImg = document.createElement('img');
+    healthFitnessImg.src = swimmingPic;
+    healthFitnessImg.alt = "Health and Fitness";
+    healthFitness.appendChild(healthFitnessText);
+    healthFitness.appendChild(healthFitnessImg);
+
+    
+    services.appendChild(restaurant);
+    services.appendChild(accomodation);
+    services.appendChild(healthFitness);
+
+    servicesContainer.appendChild(servicesTitle);
+    servicesContainer.appendChild(services);
+
     container.appendChild(hero);
+    container.appendChild(servicesContainer);
 }
 
 export default home;
