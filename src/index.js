@@ -16,7 +16,7 @@ function Load() {
         );
 
         e.target.classList.add('active');
-        
+
         if (!e.target.matches('button[data-page]')) return;
 
         const page = e.target.dataset.page;
