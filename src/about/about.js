@@ -2,7 +2,7 @@ function About() {
 const container = document.querySelector('#content');
 
 const locationContainer = document.createElement('div');
-const locationTitle = document.createElement('h3');
+const locationTitle = document.createElement('h1');
 locationTitle.textContent = "Find Us here";
 const locationText = document.createElement('p');
 locationText.textContent = `
