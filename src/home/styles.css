@@ -56,3 +56,16 @@
     height: 100%;
     border-radius: 8px;
 }
+
+.reviewsContainer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    background-color: #3d0f2b;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.reviewsContainer > .card {
+    color: #3d0f2b;
+    background-color: #fe7905;
+}

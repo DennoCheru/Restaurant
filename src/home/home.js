@@ -4,6 +4,7 @@ import logo from "./images/logo.png"
 import restaurantPic from "./images/restaurant.jpg";
 import accomodationPic from "./images/hotel room.jpg";
 import swimmingPic from "./images/hotel swimming.jpg";
+import userPic from "./images/user.jpg"
 
 function home() {
     let container = document.querySelector("#content");
@@ -80,8 +81,32 @@ function home() {
     servicesContainer.appendChild(servicesTitle);
     servicesContainer.appendChild(services);
 
+    let reviewsContainer = document.createElement('div');
+    reviewsContainer.classList.add('container', 'reviewsContainer')
+    for (let i = 0; i<5; i++) {
+        let reviewCard = document.createElement('div');
+        reviewCard.classList.add('card');
+
+        let cardImage = document.createElement('img');
+        cardImage.src = userPic;
+        cardImage.alt = "Review";
+
+        let cardReview = document.createElement('p');
+        cardReview.textContent = `"This is the best hotel south of the Sahara!"`
+
+        let cardName = document.createElement('p');
+        cardName.textContent = "~ John Doe";
+
+        reviewCard.appendChild(cardImage);
+        reviewCard.appendChild(cardReview);
+        reviewCard.appendChild(cardName);
+
+        reviewsContainer.appendChild(reviewCard);
+    }
+
     container.appendChild(hero);
     container.appendChild(servicesContainer);
+    container.appendChild(reviewsContainer);
 }
 
 export default home;
