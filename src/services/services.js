@@ -93,7 +93,7 @@ const healthFitness = [
     },
 ];
 
-function services() {
+function Services() {
 const container = document.querySelector('#content');
 
 const restaurantContainer = document.createElement('div');
@@ -183,4 +183,4 @@ container.appendChild(accomodationContainer);
 container.appendChild(healthFitnessContainer);
 }
 
-export default services;
+export default Services;

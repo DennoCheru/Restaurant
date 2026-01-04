@@ -4,27 +4,27 @@ import accomodationPic from "./images/hotel room.jpg";
 import swimmingPic from "./images/hotel swimming.jpg";
 import userPic from "./images/user.jpg"
 
-function home() {
-    let container = document.querySelector("#content");
+function Home() {
+    const container = document.querySelector("#content");
     container.classList.add('container');
     container.textContent = "";
 
-    let hero = document.createElement('div');
+    const hero = document.createElement('div');
     hero.classList.add("hero");
 
-    let text = document.createElement('div');
+    const text = document.createElement('div');
 
-    let textTitle = document.createElement('h2');
+    const textTitle = document.createElement('h2');
     textTitle.textContent = "Your Home of Comfort, Flavor & Relaxation.";
 
-    let textParagraph = document.createElement('p');
+    const textParagraph = document.createElement('p');
     textParagraph.textContent = "From delicious meals and cozy rooms to refreshing swims and energizing gym sessions, we make every stay unforgettable."
     
     text.appendChild(textTitle);
     text.appendChild(textParagraph)
 
-    let media = document.createElement('div');
-    let heroImg = document.createElement('img');
+    const media = document.createElement('div');
+    const heroImg = document.createElement('img');
     heroImg.src = logo;
     heroImg.alt = "Logo"
     media.appendChild(heroImg);
@@ -32,40 +32,40 @@ function home() {
     hero.appendChild(text)
     hero.append(media);
 
-    let servicesContainer = document.createElement('div');
+    const servicesContainer = document.createElement('div');
     servicesContainer.classList.add('container', 'servicesContainer')
     
-    let servicesTitle = document.createElement('h1');
+    const servicesTitle = document.createElement('h1');
     servicesTitle.textContent = "Our Services";
 
-    let services = document.createElement('div');
+    const services = document.createElement('div');
     services.classList.add('services');
 
-    let restaurant = document.createElement('div');
+    const restaurant = document.createElement('div');
     restaurant.classList.add('card');
-    let restaurantText = document.createElement('h2');
+    const restaurantText = document.createElement('h2');
     restaurantText.textContent = "Restaurant";
-    let restaurantImg = document.createElement('img');
+    const restaurantImg = document.createElement('img');
     restaurantImg.src = restaurantPic;
     restaurantImg.alt = "Restaurant";
     restaurant.appendChild(restaurantText);
     restaurant.appendChild(restaurantImg)
 
-    let accomodation = document.createElement('div');
+    const accomodation = document.createElement('div');
     accomodation.classList.add('card');
-    let accomodationText = document.createElement('h2');
+    const accomodationText = document.createElement('h2');
     accomodationText.textContent = "Accomodation";
-    let accomodationImg = document.createElement('img');
+    const accomodationImg = document.createElement('img');
     accomodationImg.src = accomodationPic;
     accomodationImg.alt = "Accomodation";
     accomodation.appendChild(accomodationText);
     accomodation.appendChild(accomodationImg);
 
-    let healthFitness = document.createElement('div');
+    const healthFitness = document.createElement('div');
     healthFitness.classList.add('card');
-    let healthFitnessText = document.createElement('h2');
+    const healthFitnessText = document.createElement('h2');
     healthFitnessText.textContent = "Health & Fitness";
-    let healthFitnessImg = document.createElement('img');
+    const healthFitnessImg = document.createElement('img');
     healthFitnessImg.src = swimmingPic;
     healthFitnessImg.alt = "Health and Fitness";
     healthFitness.appendChild(healthFitnessText);
@@ -79,25 +79,25 @@ function home() {
     servicesContainer.appendChild(servicesTitle);
     servicesContainer.appendChild(services);
 
-    let reviewsContainer = document.createElement('div');
+    const reviewsContainer = document.createElement('div');
     reviewsContainer.classList.add('container', 'reviewsContainer')
-    let reviewTitle = document.createElement('h1');
+    const reviewTitle = document.createElement('h1');
     reviewTitle.textContent = "What Our Customers Say";
     reviewsContainer.appendChild(reviewTitle);
-    let reviews = document.createElement('div');
+    const reviews = document.createElement('div');
     reviews.classList.add('reviews');
-    for (let i = 0; i<5; i++) {
-        let reviewCard = document.createElement('div');
+    for (let i = 0; i<4; i++) {
+        const reviewCard = document.createElement('div');
         reviewCard.classList.add('reviewCard', 'card');
 
-        let cardImage = document.createElement('img');
+        const cardImage = document.createElement('img');
         cardImage.src = userPic;
         cardImage.alt = "Review";
 
-        let cardReview = document.createElement('p');
+        const cardReview = document.createElement('p');
         cardReview.textContent = `"This is the best hotel south of the Sahara!"`
 
-        let cardName = document.createElement('p');
+        const cardName = document.createElement('p');
         cardName.textContent = "~ John Doe";
 
         reviewCard.appendChild(cardImage);
@@ -113,4 +113,4 @@ function home() {
     container.appendChild(reviewsContainer);
 }
 
-export default home;
+export default Home;
