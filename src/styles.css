@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Stack+Sans+Text:wght@200..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 body {
-    font-family: "Noto Serif";
+    font-family: "Noto Serif", sans-serif;
 }
 
 footer {
@@ -17,6 +17,7 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    border-radius: 10px;
 }
 
 .hero {
@@ -38,16 +39,19 @@ footer {
     height: auto;
 }
 
-.servicesContainer {
+.servicesContainer, 
+.mealsContainer, {
     background-color:  #fe7905;
     border-radius: 10px;
     color: #3d0f2b;
 }
 
 .services,
-.reviews {
+.reviews,
+.meals,
+.rooms {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
     gap: 1rem;
     align-items: center;
     padding: 1rem;
@@ -67,8 +71,8 @@ footer {
 }
 
 .card img {
-    width: 100%;
-    height: 100%;
+    width: 250px;
+    height: 250px;
     border-radius: 8px;
 }
 
@@ -79,11 +83,25 @@ footer {
     color: #fe7905;
 }
 
-.reviewCard {
+.reviewCard,
+.roomCard {
     color: #3d0f2b;
     background-color: #fe7905;
 }
 
 .reviews {
     grid-template-columns: repeat(5, 1fr);
+}
+
+.restaurantContainer {
+    background-color: #fe7905;
+}
+.meals
+.rooms {
+    grid-template-columns: repeat(4, minmax(250px,1fr));
+}
+
+.accomodationContainer {
+    background-color: #3d0f2b;
+    color: #fe7905;
 }
