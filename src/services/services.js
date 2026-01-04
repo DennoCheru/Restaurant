@@ -5,6 +5,10 @@ import friedFish from "./images/fried fish.jpg";
 import fries from "./images/fries.jpg";
 import roastBeef from "./images/roast beef.jpg";
 import roastChicken from "./images/roast chicken.jpg";
+import doubleBed from "./images/doublebed.jpg";
+import hotelRoom1 from "./images/hotel room.jpg";
+import hotelRoom2 from "./images/hotel room 2.jpg";
+import hotelRoom3 from "./images/hotel room 3.jpg";
 
 const meals = [
     {
@@ -44,14 +48,37 @@ const meals = [
     },
 ];
 
+const rooms = [
+    {
+        name: "Double Bed",
+        price: 3000,
+        image: doubleBed,
+    },
+    {
+        name: "Single Bed",
+        price: 2500,
+        image: hotelRoom1,
+    },
+    {
+        name: "Single Bed",
+        price: 3000,
+        image: hotelRoom2,
+    },
+    {
+        name: "Single Bed, Sea View",
+        price: 3500,
+        image: hotelRoom3,
+    },
+];
+
 function services() {
 const container = document.querySelector('#content');
 
-let restaurantContainer = document.createElement('div');
+const restaurantContainer = document.createElement('div');
 restaurantContainer.classList.add('container', 'restaurantContainer');
-const title = document.createElement('h1');
-title.textContent = "Our Meals";
-restaurantContainer.appendChild(title);
+const mealsTitle = document.createElement('h1');
+mealsTitle.textContent = "Our Meals";
+restaurantContainer.appendChild(mealsTitle);
 
 const mealsContainer = document.createElement('div');
 mealsContainer.classList.add('meals');
@@ -74,7 +101,35 @@ meals.forEach(meal => {
 });
 restaurantContainer.appendChild(mealsContainer);
 
+const accomodationContainer = document.createElement('div');
+accomodationContainer.classList.add('container', 'accomodationContainer');
+const accomodationTitle = document.createElement('h1');
+accomodationTitle.textContent = "Our Rooms";
+accomodationContainer.appendChild(accomodationTitle);
+
+const roomsContainer = document.createElement('div');
+roomsContainer.classList.add('rooms');
+rooms.forEach(room => {
+    const roomCard = document.createElement('div');
+    roomCard.classList.add('card', 'roomCard');
+
+    const img = document.createElement('img');
+    img.src = room.image;
+    img.alt = room.name;
+
+    const roomName = document.createElement('h3');
+    roomName.textContent = room.name;
+
+    const roomPrice = document.createElement('p');
+    roomPrice.textContent = `Ksh ${room.price}`;
+
+    roomCard.append(img, roomName, roomPrice);
+    roomsContainer.appendChild(roomCard);
+});
+accomodationContainer.appendChild(roomsContainer);
+
 container.appendChild(restaurantContainer);
+container.appendChild(accomodationContainer);
 }
 
 export default services;
