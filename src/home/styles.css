@@ -30,7 +30,8 @@
     color: #3d0f2b;
 }
 
-.services {
+.services,
+.reviews {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
@@ -58,14 +59,17 @@
 }
 
 .reviewsContainer {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
     background-color: #3d0f2b;
     padding: 1rem;
     border-radius: 10px;
+    color: #fe7905;
 }
 
-.reviewsContainer > .card {
+.reviewCard {
     color: #3d0f2b;
     background-color: #fe7905;
+}
+
+.reviews {
+    grid-template-columns: repeat(5, 1fr);
 }

@@ -83,9 +83,14 @@ function home() {
 
     let reviewsContainer = document.createElement('div');
     reviewsContainer.classList.add('container', 'reviewsContainer')
+    let reviewTitle = document.createElement('h1');
+    reviewTitle.textContent = "What Our Customers Say";
+    reviewsContainer.appendChild(reviewTitle);
+    let reviews = document.createElement('div');
+    reviews.classList.add('reviews');
     for (let i = 0; i<5; i++) {
         let reviewCard = document.createElement('div');
-        reviewCard.classList.add('card');
+        reviewCard.classList.add('reviewCard', 'card');
 
         let cardImage = document.createElement('img');
         cardImage.src = userPic;
@@ -101,8 +106,9 @@ function home() {
         reviewCard.appendChild(cardReview);
         reviewCard.appendChild(cardName);
 
-        reviewsContainer.appendChild(reviewCard);
+        reviews.appendChild(reviewCard);
     }
+    reviewsContainer.appendChild(reviews);
 
     container.appendChild(hero);
     container.appendChild(servicesContainer);
