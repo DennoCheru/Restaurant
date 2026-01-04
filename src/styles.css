@@ -49,7 +49,8 @@ footer {
 .services,
 .reviews,
 .meals,
-.rooms {
+.rooms,
+.utilities {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
     gap: 1rem;
@@ -67,7 +68,13 @@ footer {
     background-color: #3d0f2b;
     border-radius: 10px;
     padding: 1rem;
-    color: #fe7905;
+    color: #fe7905;    
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-origin: center;
+}
+
+.card:hover {
+    transform: scale(1.1) translateY(-3px);
 }
 
 .card img {
@@ -76,7 +83,8 @@ footer {
     border-radius: 8px;
 }
 
-.reviewsContainer {
+.reviewsContainer,
+.accomodationContainer {
     background-color: #3d0f2b;
     padding: 1rem;
     border-radius: 10px;
@@ -93,15 +101,17 @@ footer {
     grid-template-columns: repeat(5, 1fr);
 }
 
-.restaurantContainer {
+.restaurantContainer,
+.healthFitnessContainer {
     background-color: #fe7905;
 }
+
 .meals
 .rooms {
     grid-template-columns: repeat(4, minmax(250px,1fr));
 }
 
-.accomodationContainer {
+/* .accomodationContainer {
     background-color: #3d0f2b;
     color: #fe7905;
-}
+} */
